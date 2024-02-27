@@ -87,6 +87,24 @@ nav {
   transform: translateY(-100%);
 }
 
+nav #instagram-link {
+  position: absolute;
+  left: var(--padding);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  & img {
+    width: 25px;
+    height: 25px;
+    transition: transform .5s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
 nav a {
   font-size: calc(10px + .5vw);
   font-family: loretta-variable, sans-serif;

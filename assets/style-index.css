@@ -89,6 +89,24 @@ nav {
   transform: translateY(-100%);
 }
 
+nav #instagram-link {
+  position: absolute;
+  left: var(--padding);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  & img {
+    width: 25px;
+    height: 25px;
+    transition: transform .5s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
 nav a {
   font-size: calc(10px + .5vw);
   font-family: loretta-variable, sans-serif;
@@ -256,8 +274,8 @@ section::after {
 
 /* ----- MEMBERS ---- */
 
-.members {
-  margin: 10vh 0 ; /* top bottom / left right */
+/* .members {
+  margin: 10vh 0 ;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -291,6 +309,47 @@ section::after {
 }
 
 .members-list div img {
+  width: 100%;
+  border-radius: 50%;
+  background-color: var(--pink);
+  padding: 5px;
+} */
+
+.sponsors {
+  margin: 10vh 0 ; /* top bottom / left right */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(10px + 2vw);
+  bottom: 10%;
+  width: 100%;
+}
+
+.sponsors-list {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+  gap: calc(10px + 5vw);
+}
+
+.sponsors-list div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.sponsors-list div h3 {
+  background-color: var(--green);
+  border-radius: 50px;
+  padding: calc(10px + .2vw) calc(12px + 1vw);
+  width: 100%;
+  text-align: center;
+}
+
+.sponsors-list div img {
   width: 100%;
   border-radius: 50%;
   background-color: var(--pink);
